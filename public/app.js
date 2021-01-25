@@ -289,6 +289,7 @@ function getTweets() {
             html += `
             <div class="tweet">
             <img src="${element.profilePic}"alt="picture" style = " width : 50px ; height : 50px; background: rgb(129, 188, 96); ; border: 2px solid green; border-radius: 100%; >
+            <br />
             <span class="user-name" style=" text-transform:uppercase;   font-size:20px;  font-style: italic; font-face: sens-sarif ">${element.name}<span>
             <p class="tweet-date" style=" text-align:right;">${new Date(element.createdOn).toLocaleTimeString()}</p>
             <p class="tweet-text" >${element.tweet}</p>
@@ -322,6 +323,7 @@ function getMyTweets() {
                 userHtml += `
                 <div class="tweet" >
                 <img src="${element.profilePic}" alt="picture" style = " width : 50px ; height : 50px; background: rgb(129, 188, 96); ; border: 2px solid green; border-radius: 100%; ">
+                <br />
                 <p class="user-name" style="font-size:20px ; text-transform:upercase; font-style:italic ; font-face:sens-sarif ">${element.name}<p>
                 <p class="tweet-date" style=" text-align:right;">${new Date(element.createdOn).toLocaleTimeString()}</p>
                 <p class="tweet-text" >${element.tweet}</p>
@@ -348,6 +350,7 @@ socket.on('NEW_POST', (newPost) => {
     document.getElementById('text-area').innerHTML += `
     <div class="tweet" style=" width:100% ; height:200px ">
     <img src="${tweets.profilePic}" alt="picture" style = " width : 50px ; height : 50px; background: rgb(129, 188, 96); ; border: 2px solid green; border-radius: 100%; ">
+    <br />
     <span class="user-name" style=" font-size:20px ; text-transform:uppercase; font-style:italic ; font-face:sens-sarif ">${tweets.name}<span>
     <p class="tweet-date" style=" text-align:right;">${new Date(tweets.createdOn).toLocaleTimeString()}</p>
     <p class="tweet-text" style="">${tweets.tweet}</p>
