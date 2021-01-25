@@ -1,5 +1,5 @@
 // const url = "http://localhost:3000";
-const url='https://new-tweeter-app.herokuapp.com';
+const url='https://tweter-uploadpics.herokuapp.com/';
 var socket = io(url);
 
 
