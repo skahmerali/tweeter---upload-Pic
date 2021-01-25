@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="socket.io.js"></script>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./socket.io.js"></script>
+    <style>
+     .filebutton{
+        width: 1000px;
+        height: 1000px;
+        background-color: rgb(112, 163, 207);
+    }
+    .myClass {
+        display: block !important;
+        list-style: none;
+        padding: 10px;
+        font-size: 18px;
+        transform: rotate(180deg);
+
+
+    }
+
+    .haha {
+        font-size: 15px;
+        padding-left: 10px;
+        transform: rotate(180deg);
+    }
+
+    .userProfile {
+        margin-top: 15%;
+    }
+
+    .userProfilePic {
+        margin-top: 70%;
+    }
+
+    .img {
+        width: 170px;
+        border-radius: 50%;
+        display: block;
+        margin: 8px auto;
+    }
+
+
+
+    .opacityFile {
+        display: none;
+    }
+
+
+
+    .imageUpdate {
+        position: relative;
+        /* right: 5px; */
+        left: 20px;
+        width: 200px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 5px 3px 20px 10px rgb(255, 255, 255);
+    }
+
+    .img {
+        opacity: 1;
+        display: block;
+        width: 200px;
+        height: 200px;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .imageUpdate:hover .img {
+        opacity: 0.3;
+    }
+
+    .imageUpdate:hover .middle {
+        opacity: 1;
+    }
+
+    .text {
+        color: rgb(0, 0, 0);
+        font-size: 10px;
+        padding: 5px 5px;
+        margin-bottom: 60px;
+        margin-right: 500px;
+    }
+    </style>
+</head>
+
+<body onload="getProfile(); getMyTweets()">
+    <h1>Profile</h1>
+    <div>
+        
+        <button class="logout upper" onclick="return logout()">Log out</button>
+    
+        <button class="logout upper"><a href="profile.html">Other Tweet</a> </button>
+    </div>
+    <form onsubmit="return upload()">
+        <!-- dont get confused with return keyword inside onsubmit, it is there to prevent html page to reload/default behaviour, and this have nothing to do with actual file upload process but if you remove it page will reload on submit -->
+
+        <!-- <input required type="file" id="fileInput">
+        <button type="submit"> Upload </button> -->
+    </form>
+
+    <div class="profile left">
+        <!-- <div style="width: 200px; height: 200px; border-radius: 100%; border: 2px solid black;">
+            <div class="pic">
+                <div class="text">
+                    <img src="new.png" alt="" id="change" onclick="change()">
+                    <input type="file"  class="" placeholder="upload image">
+                </div>
+            </div>
+        </div> -->
+        <form action="#" onsubmit="return upload()">
+            <label class="filebutton">
+                <div class="imageUpdate">
+                    <img class="img " id="img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                        alt="Pagal">
+                    <div class="middle">
+                        <div class="text"></div>
+                    </div>
+                </div>
+                <span>
+                    <input class="opacityFile" type="file" id="fileInput" name="myfile"
+                        onchange="upload(); previewFile()">
+                </span>
+            </label>
+        </form>
+        <div class="center">
+            
+            <div id="print-username"></div>
+            <div id="print-email"></div>
+            <div id="print-number"></div>
+            <div id="print-gender"></div>
+        </div>
+    </div>
+
+
+    
+    <div class="chatapp right">
+        <!-- <div class="myprofile">
+            <h1>My Profile</h1>
+        </div> -->
+        <div>
+            <!-- <input type="text" name="" id="message" style="margin:5px ;" placeholder="Type your message...."> -->
+            <!-- <button class="post" onclick=" return tweet()">Post</button> -->
+
+
+        </div>
+        <div class="welcome">
+            WELCOME TO YOUR PROFILE
+        </div>
+        <div id="usertext-area">
+
+            <div class="tweet">
+                <p class="user-name">HEllo!
+                    <p>
+                        <p class="tweet-date">12-12-2020</p>
+                        <p class="tweet-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, neque
+                            voluptate. Sunt, id cupiditate provident pariatur odio itaque, illum ad autem neque quaerat
+                            asperiores ipsam, rerum ex cum veritatis iste.</p>
+            </div>
+        </div>
+    </div>
+
+    <ul class="colorlib-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script src="app.js"></script>
+</body>
+
+</html>

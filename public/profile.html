@@ -1,0 +1,283 @@
+<!-- <!DOCTYPE html> -->
+<!-- <html>
+
+<head>
+	<title>LogIn Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		} -->
+	<!-- </script>Custom Theme files -->
+	<!-- <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+
+
+	<!-- <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet"> -->
+<!-- 
+</head>
+
+<body onload="getProfile()">
+
+	<div class="main-w3layouts wrapper">
+		<h1>WELCOME TO YOUR "PROFILE"</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form target="_blank" onsubmit="return logout()">
+					<input id="print-username" class="text" type="text" readonly>
+					<input id="print-email" class="text email" type="email"readonly > -->
+					<!-- <input id="print-password" class="text" type="password" > -->
+					<!-- <input id="print-re-password" class="text w3lpass" type="password" > -->
+					<!-- <input id="print-date_birth" class="text" type="text"  > -->
+					<!-- <input id="print-number" class="text" type="text"  readonly>
+					<input id="print-gender" class="text" type="text" readonly > -->
+					<!-- <input id="print-address" class="text" type="text" >
+
+
+					<div>
+						<div id="userName"></div>
+						<div id="userEmail"></div>
+						<div id="userPhone"></div>
+					</div>
+
+
+
+					<div class="wthree-text">
+						<label class="anim">
+							 <input type="checkbox" class="checkbox" required=""> -->
+							<!-- <span>I Agree To The Terms & Conditions</span> -->
+						<!-- </label>
+						<div class="clear"> </div>
+					</div> -->
+					<!-- <input type="Login" value="Login" id="login"> -->
+					<!-- <input type="submit" value="Submit">
+				</form> -->
+				<!-- <p>Don't have an Account? <a href="signup.html"> SignUp Now!</a></p> -->
+			<!-- </div>
+		</div>
+
+		<div class="colorlibcopy-agile">
+			<p> PROFILE PAGE Design by <a href="#">SK AHMER ALI</a></p>
+		</div>
+
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+
+
+
+
+	<script src="app.js">
+
+	</script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="socket.io.js"></script>
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="./socket.io.js"></script>
+	<style>
+
+
+    .filebutton{
+        width: 1000px;
+        height: 1000px;
+        background-color: rgb(112, 163, 207);
+    }
+    .myClass {
+        display: block !important;
+        list-style: none;
+        padding: 10px;
+        font-size: 18px;
+        transform: rotate(180deg);
+
+
+    }
+
+    .haha {
+        font-size: 15px;
+        padding-left: 10px;
+        transform: rotate(180deg);
+    }
+
+    .userProfile {
+        margin-top: 15%;
+    }
+
+    .userProfilePic {
+        margin-top: 70%;
+    }
+
+    .img {
+        width: 170px;
+        border-radius: 50%;
+        display: block;
+        margin: 8px auto;
+    }
+
+
+
+    .opacityFile {
+        display: none;
+    }
+
+
+
+    .imageUpdate {
+        position: relative;
+        /* right: 5px; */
+        left: 20px;
+        width: 200px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 5px 3px 20px 10px rgb(255, 255, 255);
+    }
+
+    .img {
+        opacity: 1;
+        display: block;
+        width: 200px;
+        height: 200px;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .middle {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .imageUpdate:hover .img {
+        opacity: 0.3;
+    }
+
+    .imageUpdate:hover .middle {
+        opacity: 1;
+    }
+
+    .text {
+        color: rgb(0, 0, 0);
+        font-size: 10px;
+        padding: 5px 5px;
+        margin-bottom: 60px;
+        margin-right: 500px;
+    }
+    </style>
+</head>
+
+<body onload="getProfile(); getTweets()">
+
+	
+
+
+    <div class="profile left">
+        <h1>Profile</h1>
+        
+        <!-- <div>
+            <input type="file" name="" id="fileInput">
+            <button onclick="upload()">upload</button>
+        </div> -->
+
+		<form action="#" onsubmit="return upload()">
+            <label class="filebutton">
+                <div class="imageUpdate">
+                    <img class="img " id="img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                        alt="Pagal">
+                    <div class="middle">
+                        <div class="text"></div>
+                    </div>
+                </div>
+                <span><input class="opacityFile" type="file" id="fileInput" name="myfile"
+                        onchange="upload(); previewFile()">
+                </span>
+            </label>
+        </form>
+        <div class="center">
+        <div id="print-username"></div>
+        <div id="print-email"></div>
+        <div id="print-number"></div>
+        <div id="print-gender"></div>
+
+        </div>
+        <span>
+      
+            <!-- <button class="logout" onclick="return logout()">Log out</button> -->
+            <button class="logout"><a href="Home.html">My Tweet</a> </button>
+            <!-- <button class="logout" onclick="return logout()">Log out</button> -->
+        </span>
+        <!-- <br>
+        <br>
+        <br>
+        <br> -->
+    <span>
+      
+        <button class="logout" onclick="return logout()">Log out</button>
+    </span>
+    </div>
+    <div class="chatapp right">
+        <div class="myprofile">
+            <h1>CHIT & CHAT</h1>
+        </div>
+        <div>
+            <input type="text" name="" id="message" style="margin:5px ;" placeholder="Type your message....">
+            <input type="file"  id="tweetImg">
+            <button class="post" onclick=" return tweet()">Post</button>
+        </div>
+        <div id="text-area">
+		   
+			
+
+        </div>
+    </div>
+
+	<ul class="colorlib-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+    <script src="app.js"></script>
+</body>
+
+</html>
